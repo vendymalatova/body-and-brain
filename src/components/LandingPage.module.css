@@ -1,0 +1,70 @@
+.blogBadge {
+  background-color: #9032c2;
+  margin-bottom: 20px;
+}
+
+.header {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.headertext {
+  color: rgb(76, 75, 75);
+}
+
+.searchBar {
+  padding-bottom: 50px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 95%;
+  justify-self: end;
+}
+
+.error {
+  padding-top: 50px;
+  max-width: 80%;
+  font-size: 30px;
+  align-self: center;
+}
+
+@media screen and (max-width: 888px) {
+  .header {
+    padding-bottom: 30px;
+  }
+
+  .searchBar {
+    padding-bottom: 30px;
+  }
+
+  .content {
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+  }
+
+  .posts {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .error {
+    justify-self: center;
+    font-size: 20px;
+  }
+}

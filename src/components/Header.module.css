@@ -1,0 +1,10 @@
+.container {
+  padding-bottom: 30px;
+}
+
+.logo {
+  width: 200px;
+  position: absolute;
+  left: 2%;
+  top: 3%;
+}

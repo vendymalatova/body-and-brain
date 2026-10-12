@@ -1,0 +1,30 @@
+.bar {
+  border: 1px solid gray;
+  border-radius: 30px;
+  padding: 7px;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.bar:focus,
+input:focus {
+  outline: none;
+}
+
+.input {
+  border: 0;
+  padding-left: 8px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 888px) {
+  .bar {
+    width: 380px;
+  }
+}

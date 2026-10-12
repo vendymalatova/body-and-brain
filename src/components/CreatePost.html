@@ -1,0 +1,9 @@
+<div>
+  const [newPost, setNewPost] = useState(""); const handleNewPost = (e: any) =>
+  setNewPost(e.target.value); const handleCreatePost = () => { const newPostData
+  = { id: Date.now(), title: newPost, }; setData([newPostData, ...data]); };
+</div>
+<div>
+  <input type="text" onChange="{handleNewPost}" />
+  <button onClick="{handleCreatePost}">Create Post</button>
+</div>

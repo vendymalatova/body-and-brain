@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #9032c2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.code {
+  font-size: 150px;
+  height: 150px;
+  letter-spacing: 15px;
+}
+
+.badge {
+  background-color: var(--primary-color);
+  font-size: 18px;
+}
+
+.message {
+  color: rgb(76, 75, 75);
+  font-size: 18px;
+  padding: 10px 0 20px 0;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 3px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
