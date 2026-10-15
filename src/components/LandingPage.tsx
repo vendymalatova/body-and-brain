@@ -9,18 +9,24 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const LandingPage = () => {
-  const [data, setData] = useState(mockData);
   const [searchValue, setSearchValue] = useState("");
-  const handleSearch = (e: any) => setSearchValue(e.target.value);
-  const newData = data.filter((post) =>
-    post.heading.toLowerCase().includes(searchValue.toLowerCase()),
-  );
 
   const [currentCategory, setCurrentCategory] = useState("allCategory");
-  const newMockData = mockData.filter(
-    (item) =>
-      item.category === currentCategory || currentCategory === "allCategory",
-  );
+  const newMockData = mockData
+    .filter(
+      (item) =>
+        currentCategory === "allCategory" || item.category === currentCategory,
+    )
+    .filter((item) =>
+      item.heading.toLowerCase().includes(searchValue.toLowerCase()),
+    );
+
+  const handleSearch = (e: any) => setSearchValue(e.target.value);
+
+  const [visiblePosts, setVisiblePosts] = useState(6);
+  const showMore = () => {
+    setVisiblePosts((prev) => prev + 6);
+  };
 
   return (
     <div>
@@ -52,15 +58,23 @@ const LandingPage = () => {
             />
           </div>
         </div>
-        {searchValue && newData.length === 0 && (
+        {searchValue && newMockData.length === 0 && (
           <div className={styles.error}>No article found...</div>
         )}
         <div className={styles.posts}>
-          {searchValue &&
-            newData.map((post) => <PostPreview key={post.id} {...post} />)}
-          {searchValue.length === 0 &&
-            newMockData.map((post) => <PostPreview key={post.id} {...post} />)}
+          {newMockData.slice(0, visiblePosts).map((post) => (
+            <PostPreview key={post.id} {...post} />
+          ))}
         </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        {visiblePosts < newMockData.length &&
+          searchValue.length === 0 &&
+          currentCategory === "allCategory" && (
+            <button onClick={showMore} className="btn btn-secondary">
+              Show more
+            </button>
+          )}
       </div>
       <Footer />
     </div>

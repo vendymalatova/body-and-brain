@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.gridContainer}>
           <div className={styles.aboutAuthor}>
             <h3 className={styles.heading}>About Author</h3>
-            <p>
+            <p className={styles.text}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
               laudantium incidunt molestiae ipsam impedit culpa quos sint. Vel
               est rerum quis, alias sunt possimus numquam quia molestiae
@@ -34,10 +34,13 @@ const Footer = () => {
           </div>
           <div className={styles.contact}>
             <h3 className={styles.heading}>Contact</h3>
-            <ul className={styles.listItem}>
+            <ul className={styles.list}>
               <li className={styles.listItem}>You can find me on:</li>
               <li className={styles.listItem}>
-                <a href="https://cz.linkedin.com/in/vendula-mal%C3%A1tov%C3%A1-97866b3b1">
+                <a
+                  target="_blank"
+                  href="https://cz.linkedin.com/in/vendula-mal%C3%A1tov%C3%A1-97866b3b1"
+                >
                   <i className={`bi bi-linkedin ${styles.icon}`}></i>
                 </a>
                 <a href="mailto:vendymalatova@gmail.com">

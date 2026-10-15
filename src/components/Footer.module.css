@@ -25,6 +25,10 @@
   margin-bottom: 10px;
 }
 
+.text {
+  padding: 5px 0 0 10px;
+}
+
 .forVisitors,
 .contact {
   justify-self: center;
@@ -43,7 +47,6 @@
 
 .listItem:hover {
   color: black;
-  cursor: pointer;
 }
 
 .icon {
@@ -62,6 +65,10 @@
     justify-content: center;
     text-align: center;
     padding: 10px;
+  }
+
+  .list {
+    padding-left: 0;
   }
 
   .heading {

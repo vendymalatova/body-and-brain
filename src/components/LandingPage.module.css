@@ -19,6 +19,12 @@
   color: rgb(76, 75, 75);
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
 .searchBar {
   padding-bottom: 50px;
 }

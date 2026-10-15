@@ -11,7 +11,10 @@ const Page404 = () => {
       <p className={styles.message}>
         Oops, sorry. The page you are looking for does not exist.
       </p>
-      <button className={styles.button} onClick={() => window.history.back()}>
+      <button
+        className={`btn btn-secondary ${styles.button}`}
+        onClick={() => window.history.back()}
+      >
         Go back
       </button>
     </div>
